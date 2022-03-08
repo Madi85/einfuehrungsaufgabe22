@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="einfuehrungsaufgabe22">
+    <output-path>$PROJECT_DIR$/out/artifacts/einfuehrungsaufgabe22</output-path>
+    <root id="archive" name="einfuehrungsaufgabe22.war" />
+  </artifact>
+</component>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>List of the available courses</title>
+    <h:outputStylesheet name="css/style.css"/>
+</h:head>
+<h:body>
+    <h1>
+        List of the available courses
+    </h1>
+    <hr/>
+    <h:dataTable id="courseList" value="#{listCourses.courses}" var="course"
+            rowClasses="odd, even">
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="ID"/>
+            </f:facet>
+            <h:outputText value="#{course.id}"/>
+        </h:column>
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Title"/>
+            </f:facet>
+            <h:outputText value="#{course.title}"/>
+        </h:column>
+    </h:dataTable>
+    
+    <h:form id="navigation">
+        <h:link id="new" outcome="newCourse" value="Create a new course"/>
+    </h:form>
+    <hr />
+</h:body>
+
+</html>

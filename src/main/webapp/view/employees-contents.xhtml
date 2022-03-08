@@ -1,0 +1,56 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Hello from employess-contents</title>
+    </head>
+    <body>
+
+     <div align="center">
+       <br/>
+       <h:outputText value="Employees list" styleClass="contentsTitle"/>
+       <br/>
+
+       <h:dataTable value="#{backingEmployee.findeAllEmployees()}" var="employee"
+                    styleClass="table"
+                    headerClass="table-header"
+                    footerClass="table-footer"
+                    rowClasses="table-odd-row,table-even-row">
+           <h:column>
+               <!-- column header-->
+               <f:facet name="header">ID</f:facet>
+               <!-- row record-->
+               #{employee.id}
+           </h:column>
+
+           <h:column>
+               <f:facet name="header">First name</f:facet>
+               #{employee.firstname}
+           </h:column>
+
+           <h:column>
+               <f:facet name="header">Last name</f:facet>
+               #{employee.lastname}
+           </h:column>
+
+           <h:column>
+               <f:facet name="header">Company</f:facet>
+               #{employee.company}
+           </h:column>
+
+           <h:column>
+               <f:facet name="header">Employee  Number</f:facet>
+               #{employee.employeeNumber}
+           </h:column>
+
+           <h:column>
+               <f:facet name="header">Salary</f:facet>
+               #{employee.salary}
+           </h:column>
+
+       </h:dataTable>
+   </div>
+    </body>
+</ui:composition>
+
